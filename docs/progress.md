@@ -8,7 +8,9 @@ Configured main protection to require PRs, strict Python 3.11–3.13 CI from Git
 
 Review and adversarial testing found residual approval after an aborted merge, accepted template placeholders, insufficient review-protection validation and missing post-merge confirmation. These were corrected with regression tests. Aborted publication now attempts to revoke approval; an unconfirmed merge is never reported as published.
 
-Local validation: 41 unit tests passed (20 analysis tests and 21 publication-gate tests); the installed synthetic CLI completed with 2,000 resamples and seed 42. Final candidate review and remote CI evidence will be recorded on the pull request after the commit is frozen. No empirical model study or paid API call was performed.
+Final review also covered an uncertain status-write response: if GitHub applies approval but the response times out, the publisher still attempts revocation and does not merge.
+
+Local validation: 42 unit tests passed (20 analysis tests and 22 publication-gate tests); the installed synthetic CLI completed with 2,000 resamples and seed 42. Final candidate review and remote CI evidence will be recorded on the pull request after the commit is frozen. No empirical model study or paid API call was performed.
 
 Next: use this workflow for one bounded public-data milestone. Select licensed fixed responses suitable for a scorer-sensitivity question, check that the necessary provenance is available, and build only the conversion needed for that experiment. Predefine grading regimes before examining the ranking.
 

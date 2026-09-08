@@ -159,13 +159,15 @@ def publish_verified(attestation: Any, pr: int, *, publish: bool = False, github
     comment = client.post(f"issues/{pr}/comments", {"body": body})
     target_url = comment.get("html_url") if isinstance(comment, dict) else None
     require(isinstance(target_url, str) and re.fullmatch(rf"https://github\.com/{re.escape(REPOSITORY)}/(?:pull|issues)/{pr}#issuecomment-[0-9]+", target_url) is not None, "GitHub did not return a verifiable PR comment URL")
-    client.post(f"statuses/{data['head_sha']}", {
-        "state": "success",
-        "context": "agent-review",
-        "description": "Distinct implementer/tester/reviewer attested; evidence linked",
-        "target_url": target_url,
-    })
     try:
+        # A failed response can still mean GitHub applied this status. Keep the
+        # request inside the revocation boundary, including timeout failures.
+        client.post(f"statuses/{data['head_sha']}", {
+            "state": "success",
+            "context": "agent-review",
+            "description": "Distinct implementer/tester/reviewer attested; evidence linked",
+            "target_url": target_url,
+        })
         validate_live(client, data)
         client.call(["pr", "merge", str(pr), "--squash", "--match-head-commit", data["head_sha"], "--repo", REPOSITORY])
         merged_pr = client.get(f"pulls/{pr}")

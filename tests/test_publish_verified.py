@@ -39,6 +39,7 @@ class FakeGitHub:
         self.advance_on_read = None
         self.merge_error = None
         self.revocation_error = None
+        self.success_status_error = None
         self.merge_confirmation = {"merged": True, "merge_commit_sha": OTHER}
         self.comment_url = f"https://github.com/{gate.REPOSITORY}/pull/7#issuecomment-123"
         self.values = {
@@ -66,6 +67,9 @@ class FakeGitHub:
         self.writes.append((suffix, copy.deepcopy(payload)))
         if payload.get("state") == "failure" and self.revocation_error:
             raise self.revocation_error
+        if payload.get("state") == "success" and self.success_status_error:
+            # Simulate a server-applied status whose response never arrives.
+            raise self.success_status_error
         return {"html_url": self.comment_url} if suffix.endswith("/comments") else {"state": "success"}
 
     def call(self, args):
@@ -227,6 +231,15 @@ class PublishGateTests(unittest.TestCase):
         self.assertEqual(len(client.writes), 3)
         self.assertEqual(client.writes[-1][0], f"statuses/{HEAD}")
         self.assertEqual(client.writes[-1][1]["state"], "failure")
+
+    def test_success_stamp_timeout_attempts_revocation(self):
+        client = FakeGitHub()
+        client.success_status_error = subprocess.TimeoutExpired(["gh", "api"], 60)
+        with self.assertRaises(subprocess.TimeoutExpired):
+            gate.publish_verified(attestation(), 7, publish=True, github=client)
+        self.assertEqual([payload.get("state") for _, payload in client.writes], [None, "success", "failure"])
+        self.assertEqual(client.writes[-1][0], f"statuses/{HEAD}")
+        self.assertEqual(client.merges, [])
 
     def test_unconfirmed_merge_never_reports_published(self):
         for confirmation in ({}, {"merged": False, "merge_commit_sha": OTHER}, {"merged": True, "merge_commit_sha": None}, {"merged": True, "merge_commit_sha": "0" * 40}):
