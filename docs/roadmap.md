@@ -40,8 +40,8 @@ Use a reproducible issue discovered in M1–M3 to prepare a focused contribution
 
 1. Read the current state and select one bounded item.
 2. Reproduce or specify the problem before changing code.
-3. Implement and run relevant checks.
-4. Obtain a separate review for statistical or execution changes.
-5. Publish verified changes to the owner's repository; log the evidence and next step.
+3. Assign implementation and adversarial testing to separate agents.
+4. Freeze the candidate and obtain tester and reviewer receipts for its exact head and base SHAs.
+5. Publish through a PR using the [publication gate](agent-workflow.md), required CI and agent-review status; log evidence and next step.
 
 Review new research weekly. A trend must change the problem, method or validation plan to justify a new feature. Do not create empty commits, placeholder features or unsupported results to satisfy a daily cadence.

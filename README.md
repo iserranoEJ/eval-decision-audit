@@ -61,7 +61,7 @@ The [roadmap](docs/roadmap.md) tracks the acceptance criteria. See [related work
 
 ## Development and provenance
 
-Agent-assisted development with tests and review. The human maintainer is [Iñaki Serrano](https://github.com/iserranoEJ). Commit activity is not an experimental result; claims about models require real, traceable evaluation data.
+Agent-assisted development with separate implementation, testing and review tasks. The [publication workflow](docs/agent-workflow.md) records reviews for the candidate commit and requires CI before merging a pull request. These are agent reviews, not independent human approvals. The human maintainer is [Iñaki Serrano](https://github.com/iserranoEJ). Commit activity is not an experimental result; claims about models require real, traceable evaluation data.
 
 This is an independent project. It contains no Model ML Composite internals or employer datasets.
 
