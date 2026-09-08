@@ -1,5 +1,17 @@
 # Progress
 
+## 2026-09-08 — Reviewed publication workflow
+
+Added coordinator, implementer, tester and reviewer responsibilities, a PR template and a fail-closed publication script. Reviews identify the full candidate and base SHAs; the script rejects stale evidence, missing/unsuccessful CI and weakened required protection settings. It publishes the actual receipts on the PR and merges only the matching candidate. Dry-run performs read-only checks.
+
+Configured main protection to require PRs, strict Python 3.11–3.13 CI from GitHub Actions and the coordinator's agent-review status, including for administrators. Force pushes and branch deletion are disabled. The receipts attest separate agent tasks; shared GitHub credentials do not provide authenticated reviewer independence.
+
+Review and adversarial testing found residual approval after an aborted merge, accepted template placeholders, insufficient review-protection validation and missing post-merge confirmation. These were corrected with regression tests. Aborted publication now attempts to revoke approval; an unconfirmed merge is never reported as published.
+
+Local validation: 41 unit tests passed (20 analysis tests and 21 publication-gate tests); the installed synthetic CLI completed with 2,000 resamples and seed 42. Final candidate review and remote CI evidence will be recorded on the pull request after the commit is frozen. No empirical model study or paid API call was performed.
+
+Next: use this workflow for one bounded public-data milestone. Select licensed fixed responses suitable for a scorer-sensitivity question, check that the necessary provenance is available, and build only the conversion needed for that experiment. Predefine grading regimes before examining the ranking.
+
 ## 2026-09-08 — Initial implementation
 
 Completed the M0 analysis contract: strict provenance checks, complete paired cohorts, retained failed-attempt costs, deterministic paired bootstrap and a descriptive observed frontier. Added a synthetic ten-case, three-agent fixture and 20 tests.
