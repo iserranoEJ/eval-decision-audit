@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "synthetic_demo": true,
+    "description": "Entirely constructed demonstration; fictional agents, arbitrary scores and costs. Not a real benchmark."
+  },
+  "provenance": {
+    "dataset_revision": "synthetic-tasks-v1",
+    "scorer_revision": "synthetic-scorer-v1",
+    "harness_revision": "synthetic-harness-v1"
+  },
+  "observations": [
+    {
+      "case_id": "case-01",
+      "agent_id": "baseline",
+      "score": 0.75,
+      "cost_usd": 0.01,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-01",
+      "agent_id": "budget",
+      "score": 0.5,
+      "cost_usd": 0.004,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-01",
+      "agent_id": "thorough",
+      "score": 1,
+      "cost_usd": 0.023,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-02",
+      "agent_id": "baseline",
+      "score": 0.5,
+      "cost_usd": 0.011,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-02",
+      "agent_id": "budget",
+      "score": 0.5,
+      "cost_usd": 0.0043,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-02",
+      "agent_id": "thorough",
+      "score": 0.75,
+      "cost_usd": 0.024,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-03",
+      "agent_id": "baseline",
+      "score": 1,
+      "cost_usd": 0.012,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-03",
+      "agent_id": "budget",
+      "score": 0.75,
+      "cost_usd": 0.0046,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-03",
+      "agent_id": "thorough",
+      "score": 1,
+      "cost_usd": 0.025,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-04",
+      "agent_id": "baseline",
+      "score": 0.75,
+      "cost_usd": 0.013000000000000001,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-04",
+      "agent_id": "budget",
+      "score": 0.5,
+      "cost_usd": 0.0049,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-04",
+      "agent_id": "thorough",
+      "score": 1,
+      "cost_usd": 0.026,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-05",
+      "agent_id": "baseline",
+      "score": 0.5,
+      "cost_usd": 0.014,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-05",
+      "agent_id": "budget",
+      "score": 0,
+      "cost_usd": 0.0052,
+      "status": "error",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-05",
+      "agent_id": "thorough",
+      "score": 0.75,
+      "cost_usd": 0.027,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-06",
+      "agent_id": "baseline",
+      "score": 1,
+      "cost_usd": 0.015,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-06",
+      "agent_id": "budget",
+      "score": 0.75,
+      "cost_usd": 0.0055,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-06",
+      "agent_id": "thorough",
+      "score": 1,
+      "cost_usd": 0.028,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-07",
+      "agent_id": "baseline",
+      "score": 0.75,
+      "cost_usd": 0.016,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-07",
+      "agent_id": "budget",
+      "score": 0.5,
+      "cost_usd": 0.0058,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-07",
+      "agent_id": "thorough",
+      "score": 0.75,
+      "cost_usd": 0.028999999999999998,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-08",
+      "agent_id": "baseline",
+      "score": 0.5,
+      "cost_usd": 0.017,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-08",
+      "agent_id": "budget",
+      "score": 0.5,
+      "cost_usd": 0.0060999999999999995,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-08",
+      "agent_id": "thorough",
+      "score": 0.75,
+      "cost_usd": 0.03,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-09",
+      "agent_id": "baseline",
+      "score": 0.75,
+      "cost_usd": 0.018000000000000002,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-09",
+      "agent_id": "budget",
+      "score": 0.5,
+      "cost_usd": 0.0063999999999999994,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-09",
+      "agent_id": "thorough",
+      "score": 1,
+      "cost_usd": 0.031,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-10",
+      "agent_id": "baseline",
+      "score": 1,
+      "cost_usd": 0.019000000000000003,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-10",
+      "agent_id": "budget",
+      "score": 0.75,
+      "cost_usd": 0.006699999999999999,
+      "status": "ok",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    },
+    {
+      "case_id": "case-10",
+      "agent_id": "thorough",
+      "score": 0,
+      "cost_usd": 0.032,
+      "status": "error",
+      "dataset_revision": "synthetic-tasks-v1",
+      "scorer_revision": "synthetic-scorer-v1",
+      "harness_revision": "synthetic-harness-v1"
+    }
+  ]
+}
